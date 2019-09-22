@@ -13,3 +13,6 @@
 [submodule "aarch64-img-extra-config"]
 	path = aarch64-img-extra-config
 	url = git@github.com:markVnl/aarch64-img-extra-config.git
+[submodule "rpms-kernel"]
+	path = rpms-kernel
+	url = git@github.com:markVnl/rpms-kernel.git
