@@ -1,0 +1,15 @@
+[submodule "rpms-uboot-tools"]
+	path = rpms-uboot-tools
+	url = git@github.com:markVnl/rpms-uboot-tools.git
+[submodule "zram"]
+	path = zram
+	url = git@github.com:markVnl/zram.git
+[submodule "SPEC-livecd-tools"]
+	path = SPEC-livecd-tools
+	url = git@github.com:markVnl/SPEC-livecd-tools.git
+[submodule "SPEC-appliance-tools"]
+	path = SPEC-appliance-tools
+	url = git@github.com:markVnl/SPEC-appliance-tools.git
+[submodule "aarch64-img-extra-config"]
+	path = aarch64-img-extra-config
+	url = git@github.com:markVnl/aarch64-img-extra-config.git
