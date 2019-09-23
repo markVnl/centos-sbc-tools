@@ -152,6 +152,8 @@ systemctl mask kdump.service
 
 echo "Setting up Raspbery PI 3(+) wlan firmware..."
 # RaspberryPi 3 wlan config
+# source (short_commit 130cb86):
+# https://github.com/RPi-Distro/firmware-nonfree/blob/master/brcm/brcmfmac43430-sdio.raspberrypi-rpi.txt
 cat > /usr/lib/firmware/brcm/brcmfmac43430-sdio.txt << EOF
 # SPDX-License-Identifier: GPL-2.0+
 # (C) Copyright 2018 Raspberry Pi (Trading) Ltd.
@@ -205,6 +207,8 @@ EOF
 
 
 # RaspberryPI 3 model+ wlan config
+# source (short_commit 130cb86):
+# https://github.com/RPi-Distro/firmware-nonfree/blob/master/brcm/brcmfmac43455-sdio.txt
 cat > /usr/lib/firmware/brcm/brcmfmac43455-sdio.txt << EOF
 # Cloned from bcm94345wlpagb_p2xx.txt 
 NVRAMRev=$Rev: 498373 $
