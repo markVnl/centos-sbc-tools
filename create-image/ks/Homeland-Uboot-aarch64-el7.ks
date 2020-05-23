@@ -24,6 +24,7 @@ repo --name="sbc-tools"   --baseurl=https://copr-be.cloud.fedoraproject.org/resu
 # Package setup
 %packages
 @core
+NetworkManager-wifi
 aarch64-img-extra-config
 bcm283x-firmware
 chrony
@@ -83,9 +84,9 @@ echo "Setting up workarounds for aarch64 uboot-uefi..."
 #   chroot ${mountpoint} /bin/bash -c "/usr/sbin/grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg"
 #
 
-# time-out takes much longer as 1 sec
+# time-out takes much longer on RPI's
 cat > /etc/default/grub << EOF
-GRUB_TIMEOUT=1
+GRUB_TIMEOUT=2
 GRUB_TERMINAL_OUTPUT="console"
 GRUB_CMDLINE_LINUX=""
 EOF
@@ -128,11 +129,11 @@ echo "leave directory"
 popd
 
 # Uboot RPI 3(+)
-cp -P /usr+\/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
+cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
 
 echo "Write README file..."
 cat >/root/README << EOF
-== Homeland el7.7.1908 development AARCH64 image ==
+== Homeland el7 development AARCH64 image ==
 
 Note: this is a community effort not supported by centOS by any means
       it's just an "academic proof of concepts" 
